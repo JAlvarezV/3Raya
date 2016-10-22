@@ -1,6 +1,5 @@
 window.onload = function () {
     table = document.getElementsByTagName('table')[0];
-    cells = table.getElementsByTagName('td');
     info = document.getElementById('info');
     game = new Game(table,info);
     document.getElementById('reiniciar').addEventListener("click",restart);
