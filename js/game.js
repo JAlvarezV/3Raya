@@ -8,12 +8,12 @@ class Game {
     move(pos){
         if(!this.gameOver()){
             var m = this.board.movement(pos,this.turn);
-            //No more cells available so we end the game in tie
             //If the player clicks in an empty cell
             if(m!=false && m!=-1){
                 //Update the view of the table
                 this.view.updateCell(pos,this.turn);
             }
+            //No more cells available so we end the game in tie
             if(this.board.movement(pos,this.turn)==-1) {
                 this.view.endGame(this.turn,-1);
             }
